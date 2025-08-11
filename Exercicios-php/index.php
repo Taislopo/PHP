@@ -97,7 +97,11 @@
     ?>
     <?php
     //Escreva um programa que leia o salário de um funcionário e aplique um aumento de acordo com a seguinte regra: salários menores que R$1000 recebem 20% de aumento, entre R$1000 e R$2000 recebem 15%, e acima de R$2000 recebem 10%.
-
+    $salario = 1500;
+    if($salario<1000){
+        $salario = $salario*20;
+    }
+    else if ($salario >= 1000 || )
 
 
     ?>
