@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'bold';
+    src: url(../fonts/work-sans/WorkSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'extra';
+    src: url(../fonts/work-sans/WorkSans-ExtraBold.ttf);
+}
+
+*{
+   margin: 0;
+}
+
+.form label {
+    font-size: 18px;
+    font-family: 'bold';
+}
+
+.form {
+
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    position: relative;
+    left: 550px;
+    top: 100px;
+}
+
+h1 {
+    font-family: 'extra';
+    position: relative;
+    top: 50px;
+    text-align: center;
+}
+
+button {
+    width: 100px;
+    position: relative;
+    top: 20px;
+    left: 400px;
+}
+
