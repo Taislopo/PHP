@@ -76,47 +76,60 @@
 
     <?php
     //Escreva um programa que leia um mês do ano e informe quantos dias ele tem.
-   
+
     $meses = [
         "janeiro" => "30",
-        "fevereiro"=>"28",
-        "março"=>"31",
-        "abril"=>"30",
-        "maio"=>"31",
-        "junho" =>"30",
-        "julho" =>"31",
-        "agosto"=>"30",
-        "setembro"=>"31",
-        "outubro"=>"30",
-        "novenbro"=>"31",
-        "dezembro"=>"30"
+        "fevereiro" => "28",
+        "março" => "31",
+        "abril" => "30",
+        "maio" => "31",
+        "junho" => "30",
+        "julho" => "31",
+        "agosto" => "30",
+        "setembro" => "31",
+        "outubro" => "30",
+        "novenbro" => "31",
+        "dezembro" => "30"
     ];
     $mes = "janeiro";
-    $meses[$mes][$mes]; 
-      
+    $meses[$mes][$mes];
+
     ?>
     <?php
     //Escreva um programa que leia o salário de um funcionário e aplique um aumento de acordo com a seguinte regra: salários menores que R$1000 recebem 20% de aumento, entre R$1000 e R$2000 recebem 15%, e acima de R$2000 recebem 10%.
     $salario = 1500;
-    if($salario<1000){
-        $salario = $salario*20;
-    }
-    else if ($salario >= 1000 || )
 
+    if ($salario < 1000) {
+        $novoSalario = $salario + ($salario * 0.20);
+    } elseif ($salario <= 2000) {
+        $novoSalario = $salario + ($salario * 0.15);
+    } else {
+        $novoSalario = $salario + ($salario * 0.10);
+    }
+
+    echo "Salário original: R$ $salario\n";
+    echo "Novo salário: R$ $novoSalario\n";
 
     ?>
+
     <?php
     //Imprima os primeiros 10 números da sequência de Fibonacci utilizando um laço de repetição.
+    $a = 0;
+    $b = 1;
 
+    echo "Sequência de Fibonacci (10 primeiros números):\n";
 
+    for ($i = 0; $i < 10; $i++) {
+        echo $a . "\n";
+
+        // Próximo número é a soma dos dois anteriores
+        $proximo = $a + $b;
+        $a = $b;
+        $b = $proximo;
+    }
 
     ?>
-    <?php
-    //Inverter uma String, implemente um programa que inverte uma String fornecida pelo usuário utilizando um laço de repetição..
 
-
-
-    ?>
 
 
 

@@ -30,7 +30,7 @@
                 <td>@mdo</td>
                 <td>gdgh</td>
                 <td>
-                    <div class="btn-group" role="group" aria-label="Basic example">
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                         <button type="button" class="btn btn-secondary">Left</button>
                         <button type="button" class="btn btn-secondary">Middle</button>
                         <button type="button" class="btn btn-secondary">Right</button>
@@ -44,7 +44,7 @@
                 <td>@fat</td>
                 <td>gdgg</td>
                 <td>
-                    <div class="btn-group" role="group" aria-label="Basic example">
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                         <button type="button" class="btn btn-secondary">Left</button>
                         <button type="button" class="btn btn-secondary">Middle</button>
                         <button type="button" class="btn btn-secondary">Right</button>
@@ -58,7 +58,7 @@
                 <td>@fat</td>
                 <td>hh</td>
                 <td>
-                    <div class="btn-group" role="group" aria-label="Basic example">
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                         <button type="button" class="btn btn-secondary">Left</button>
                         <button type="button" class="btn btn-secondary">Middle</button>
                         <button type="button" class="btn btn-secondary">Right</button>
@@ -72,7 +72,7 @@
                 <td>@fat</td>
                 <td>ghfh</td>
                 <td>
-                    <div class="btn-group" role="group" aria-label="Basic example">
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                         <button type="button" class="btn btn-secondary">Left</button>
                         <button type="button" class="btn btn-secondary">Middle</button>
                         <button type="button" class="btn btn-secondary">Right</button>
@@ -86,7 +86,7 @@
                 <td>@fat</td>
                 <td>yty</td>
                 <td>
-                    <div class="btn-group" role="group" aria-label="Basic example">
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                         <button type="button" class="btn btn-secondary">Left</button>
                         <button type="button" class="btn btn-secondary">Middle</button>
                         <button type="button" class="btn btn-secondary">Right</button>
@@ -100,10 +100,10 @@
                 <td>@fat</td>
                 <td>jtyjt</td>
                 <td>
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary">Left</button>
-                        <button type="button" class="btn btn-secondary">Middle</button>
-                        <button type="button" class="btn btn-secondary">Right</button>
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button type="button" class="btn btn-secondary">Abrir</button>
+                        <button type="button" class="btn btn-secondary">Editar</button>
+                        <button type="button" class="btn btn-secondary">Fechar</button>
                     </div>
                 </td>
             </tr>
