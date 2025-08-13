@@ -10,107 +10,58 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
+<?php
+   $dsn = 'mysql:dbname=db_form;host=127.0.0.1';
+   $usuario="root";
+   $senha="";
+
+   $conexaoBanco = new PDO($dsn, $usuario,$senha);
+   $scriptConsulta = "SELECT * FROM tb_form";
+   $resultadoConsulta =$conexaoBanco->query($scriptConsulta)->fetchAll();
+ 
+//    echo"<pre>";
+//    //ajudar a ler o codigo
+//    var_dump($resultadoConsulta);
+   
+?>
+
 <body>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Telefone</th>
-                <th scope="col">Usuário</th>
-                <th scope="col">Senha</th>
-                <th scope="col">Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>gdgh</td>
-                <td>
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary">Left</button>
-                        <button type="button" class="btn btn-secondary">Middle</button>
-                        <button type="button" class="btn btn-secondary">Right</button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>gdgg</td>
-                <td>
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary">Left</button>
-                        <button type="button" class="btn btn-secondary">Middle</button>
-                        <button type="button" class="btn btn-secondary">Right</button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>hh</td>
-                <td>
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary">Left</button>
-                        <button type="button" class="btn btn-secondary">Middle</button>
-                        <button type="button" class="btn btn-secondary">Right</button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">4</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>ghfh</td>
-                <td>
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary">Left</button>
-                        <button type="button" class="btn btn-secondary">Middle</button>
-                        <button type="button" class="btn btn-secondary">Right</button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">5</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>yty</td>
-                <td>
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary">Left</button>
-                        <button type="button" class="btn btn-secondary">Middle</button>
-                        <button type="button" class="btn btn-secondary">Right</button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">6</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>jtyjt</td>
-                <td>
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary">Left</button>
-                        <button type="button" class="btn btn-secondary">Middle</button>
-                        <button type="button" class="btn btn-secondary">Right</button>
-                    </div>
-                </td>
-            </tr>
 
-
-        </tbody>
-    </table>
+    <section>
+        <h1>Tabela de Usuários</h1><br>
+        <br><br>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">Usuário</th>
+                    <th scope="col">Senha</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($resultadoConsulta as $linha)   { ?>
+                    <tr>
+                        <th scope="row"> <?= $linha['id_form'] ?> </th>
+                        <td><?= $linha['nome'] ?></td>
+                        <td><?= $linha['telefone'] ?></td>
+                        <td><?= $linha['usuario'] ?></td>
+                        <td><?= $linha['senha'] ?></td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic mixed styles">
+                                <button type="button" class="btn btn-success">Abrir</button>
+                                <button type="button" class="btn btn-warning">Editar</button>
+                                <button type="button" class="btn btn-danger">Fechar</button>
+                            </div>
+                        </td>
+                    </tr>
+                <?php }?>
+            
+            </tbody>
+        </table>
+    </section>
 
 
 </body>
