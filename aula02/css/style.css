@@ -1,11 +1,11 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"); /*O "@import" sempre em primerio*/
 @font-face {
-    font-family: 'bold';
-    src: url(../fonts/work-sans/WorkSans-Bold.ttf);
+    font-family: 'italic';
+    src: url(../font/Inter-Italic-VariableFont_opsz\,wght.ttf);
 }
-
 @font-face {
-    font-family: 'extra';
-    src: url(../fonts/work-sans/WorkSans-ExtraBold.ttf);
+    font-family: 'ones';
+    src: url(../fonts/onest/Onest-Bold.ttf);
 }
 
 *{
@@ -27,7 +27,8 @@
     top: 100px;
 }
 
-h1 {
+
+.form h1 {
     font-family: 'extra';
     position: relative;
     top: 50px;

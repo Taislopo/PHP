@@ -7,7 +7,31 @@ Para fazer a conexão é nescessario então criar as variaveis do host local do 
    $dsn = 'mysql:dbname=db_form;host=127.0.0.1';
    $usuario="root";
    $senha="";
-   na frente do dbname= é nescessario colocar o nome do seu banco de dados 
+```
+   na frente do dbname= é nescessario colocar o nome do seu banco de dados como um endereço.
+
+   Depois é nescessario criar uma variavel onde sera amarzenados o dsn, usuario e senha, uma variavel para armazenar a consulta da tabela do banco de dados aonde voce quer pegar os dados, uma variavel para fazer a conexao dos dois tanto colocando a variavel do banco e da consulta usando o query e o fechAll
+
+  
+ ```php 
+   $conexaoBanco = new PDO($dsn, $usuario,$senha);
+   $scriptConsulta = "SELECT * FROM tb_form";
+   $resultadoConsulta =$conexaoBanco->query($scriptConsulta)->fetchAll();
+  ```
+  e depois usar o foreach especialmente usado para arrays 
+```php
+   <?php foreach($resultadoConsulta as $linha)   { ?>
+                    <tr>
+                        <th scope="row"> <?= $linha['id_form'] ?> </th>
+                        <td><?= $linha['nome'] ?></td>
+                        <td><?= $linha['telefone'] ?></td>
+                        <td><?= $linha['usuario'] ?></td>
+                        <td><?= $linha['senha'] ?></td>
+                        <td>
+                           </td>
+                    </tr>
+     <?php }?>
+ ```    
 
 
 

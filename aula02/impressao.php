@@ -1,46 +1,48 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<?php
+include './template/header.php';
+?>
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impressao</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
-</head>
+// $nomeForm = $_POST['nome'];
+// $telefoneForm = $_POST['telefone'];
+// $usuarioForm = $_POST['usuario'];
+// $senhaForm = $_POST['senha'];
+// $confirmar_senhaForm = $_POST['confirmar-senha'];
 
-<body>
-    <?php
-    $nomeForm = $_POST['nome'];
-    $telefoneForm = $_POST['telefone'];
-    $usuarioForm = $_POST['usuario'];
-    $senhaForm = $_POST['senha'];
-    $confirmar_senhaForm = $_POST['confirmar-senha'];
-
-    // echo'<pre>';
-    // var_dump($_POST);
-    // echo'</pre>';
-
-    ?>
-        <h1>Impressão</h1>
-        <div class="form">
-
-        <h3>Nome</h3>
-        <p><?= $nomeForm ?> </p>
-        <h3>Telefone </h3>
-        <p><?= $telefoneForm ?></p>
-        <h3>Nome do Usuário</h3>
-        <p><?= $usuarioForm ?></p>
-        <h3>Senha</h3>
-        <p><?= $senhaForm ?></p>
-        <h3>Confirmar senha</h3>
-        <p><?= $confirmar_senhaForm ?></p>
-        
-    </div>
+// echo'<pre>';
+// var_dump($idConsulta);
+// echo'</pre>';
 
 
+$idConsulta = $_GET['idConsulta']; //criei uma variavel para fazer a requisicao GET
+$dsn = 'mysql:dbname=db_form;host=127.0.0.1';
+$usuario = "root";
+$senha = "";
+//new PDO pegando um novo objeto
+$conexaoBanco = new PDO($dsn, $usuario, $senha);
+$scriptresultado = "SELECT * FROM tb_form where id_form = $idConsulta"; //varivel criada pegando a consulta do id da tabela e fazendo ela se conectar com o GET
+$scriptConsulta = $conexaoBanco->query($scriptresultado)->fetch(); //fetchAll quando se pega todos os dados, fetch pega um por um
+//nessa conexao pegamos a varivel que contem o endereço do banco de dados e a consulta do id o fechAll é usado em formato de matriz
+?>
 
-</body>
+<h1>Impressão</h1>
+<div class="form">
 
-</html>
+
+    <h3>Nome</h3>
+    <p><?= $scriptConsulta['nome'] ?> </p>
+    <h3>Telefone </h3>
+    <p><?= $scriptConsulta['telefone'] ?></p>
+    <h3>Nome do Usuário</h3>
+    <p><?= $scriptConsulta['usuario'] ?></p>
+    <h3>Senha</h3>
+    <p><?= $scriptConsulta['senha'] ?></p>
+
+
+</div>
+
+
+<?php
+include './template/footer.php';
+
+?>
