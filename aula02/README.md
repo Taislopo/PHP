@@ -32,13 +32,17 @@ Para fazer a conexão é nescessario então criar as variaveis do host local do 
                     </tr>
      <?php }?>
  ```    
+ ### Diferenças da requisição GET e POST
+
+       ##🧠 Quando usar cada um?
+
+      Situação	Melhor método:
+
+      Pesquisas, filtros, navegação	GET
+      Formulários de login/senha	POST
+      Envio de arquivos	POST
+      URLs compartilháveis	GET
+      Dados sensíveis	POST
 
 
 
-
-
-
-
-
-
- ```
