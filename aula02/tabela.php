@@ -23,7 +23,7 @@ $resultadoConsulta = $conexaoBanco->query($scriptConsulta)->fetchAll();
 
 
 <section class="fundo">
-    <h1>Tabela de Usuários</h1><br>
+    <h1 class="titulo">Tabela de Usuários</h1><br>
     <br><br>
     <table class="table table-bordered">
         <thead>
@@ -47,8 +47,8 @@ $resultadoConsulta = $conexaoBanco->query($scriptConsulta)->fetchAll();
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic mixed styles">
                             <a href="./impressao.php?idConsulta=<?= $linha['id_form'] ?>" class="btn btn-success">Abrir</a>
-                            <a type="button" class="btn btn-warning">Editar</a>
-                            <a type="button" class="btn btn-danger">Fechar</a>
+                            <a href="./index.php?id=<?= $linha ['id_form'] ?>" class="btn btn-warning">Editar</a>
+                            <a href="./form-delete.php?idDelete=<?= $linha['id_form'] ?>"  class="btn btn-danger">Delete</a>
                         </div>
                     </td>
                 </tr>

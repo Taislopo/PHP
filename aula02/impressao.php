@@ -3,11 +3,11 @@ include './template/header.php';
 ?>
 <?php
 
-// $nomeForm = $_POST['nome'];
-// $telefoneForm = $_POST['telefone'];
-// $usuarioForm = $_POST['usuario'];
-// $senhaForm = $_POST['senha'];
-// $confirmar_senhaForm = $_POST['confirmar-senha'];
+$nomeForm = $_POST['nome'];
+$telefoneForm = $_POST['telefone'];
+$usuarioForm = $_POST['usuario'];
+$senhaForm = $_POST['senha'];
+$confirmar_senhaForm = $_POST['confirmar-senha'];
 
 // echo'<pre>';
 // var_dump($idConsulta);
