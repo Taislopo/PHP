@@ -1,0 +1,26 @@
+.cabecalho{
+    height: 120px;
+    background-color: #490808;
+
+}
+
+.navegacao h1{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+}
+
+.tabela{
+    position: relative;
+    top: 80px;
+    left: 200px;
+    width: 70vw;
+  
+}
+.fundo{
+    height: 100vh;
+    width: 100vw;
+ background-color: rgba(221, 198, 198, 0.651);
+}
